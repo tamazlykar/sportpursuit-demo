@@ -1,0 +1,22 @@
+<GridLayout (tap)="onTap($event)" rows="1, *, auto" columns="*" class="m-5"
+    [width]="isStretched ? '': width.toString()" [height]="height.toString()">
+  <Image row="0" rowSpan="3" [src]="product.image" stretch="aspectFill"></Image>
+
+  <GridLayout row="1" columns="4*, 6*">
+    <StackLayout col="0"  class="logo-area">
+      <Image class="logo" [src]="product.logo"></Image>
+      <Label class="extra text-right p-r-4" [text]="product.extra"></Label>
+    </StackLayout>
+    <Label col="1"></Label>
+  </GridLayout>
+
+  <StackLayout row="2" class="information-area p-5">
+    <GridLayout columns="*, auto">
+      <Label col="0" [text]="product.title" class="title font-weight-bold"></Label>
+      <Label col="1" [text]="product.timer"></Label>
+    </GridLayout>
+    <Label [text]="product.description"></Label>
+  </StackLayout>
+
+</GridLayout>
+

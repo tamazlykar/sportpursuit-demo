@@ -1,0 +1,22 @@
+<StackLayout>
+
+  <Label class="compartment-title" text="Bestsellers"></Label>
+
+  <ScrollView orientation="horizontal">
+    <StackLayout orientation="horizontal" height="190" class="p-5">
+
+      <GridLayout rows="*, auto" columns="110" *ngFor="let bestseller of bestsellers" class="m-5">
+        <Image row="0" [src]="bestseller.imageUrl" stretch="fill"></Image>
+        <StackLayout row="1" class="information-area p-5">
+          <Label [text]="bestseller.brand" class="font-weight-bold"></Label>
+          <Label [text]="bestseller.name"></Label>
+          <Label [text]="bestseller.prices.specialPrice + ' £'" class="font-weight-bold"></Label>
+          <Label [text]="'RRP ' + bestseller.prices.retailPrice + ' £'"></Label>
+        </StackLayout>
+      </GridLayout>
+
+    </StackLayout>
+  </ScrollView>
+
+</StackLayout>
+

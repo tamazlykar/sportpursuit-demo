@@ -1,0 +1,29 @@
+// Custom common variables
+@import '../../../app-variables';
+
+.information-area {
+  background-color: black;
+  font-size: $content-font-size;
+}
+
+.title {
+  font-size: $content-title-font-size;
+}
+
+.logo-area {
+  vertical-align: center;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.logo {
+  opacity: 1;
+}
+
+.extra {
+  background-color: red;
+  font-size: $content-font-size;
+}
+
+.element-width {
+  width: 250;
+}

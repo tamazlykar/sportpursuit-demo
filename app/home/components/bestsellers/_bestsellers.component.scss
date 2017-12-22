@@ -1,0 +1,11 @@
+// Custom common variables
+@import '../../../app-variables';
+
+.information-area {
+  background-color: rgb(73, 73, 73);
+  font-size: $content-font-size;
+}
+
+Image {
+  margin: 0;
+}

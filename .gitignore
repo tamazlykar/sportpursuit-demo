@@ -1,0 +1,32 @@
+# dependencies
+/node_modules
+platforms/
+tmp/
+typings/
+report/
+hooks/
+lib/
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+#System Files
+.DS_Store
+Thumbs.db
+npm-debug.log
+
+*.js.map
+app/**/*.js
+app/**/*.css
+

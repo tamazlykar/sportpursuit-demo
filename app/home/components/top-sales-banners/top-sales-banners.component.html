@@ -1,0 +1,5 @@
+<ScrollView orientation="horizontal">
+  <StackLayout orientation="horizontal" class="p-5">
+    <ProductCard *ngFor="let banner of banners" [product]="banner" [height]="140"></ProductCard>
+  </StackLayout>
+</ScrollView>
