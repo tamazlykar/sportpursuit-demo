@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Headers, Http, Response } from "@angular/http";
+import { HttpService } from '../shared/services/http.service';
 import { Observable } from "rxjs/Rx";
 import "rxjs/add/operator/do";
 import "rxjs/add/operator/map";
@@ -13,7 +13,7 @@ export class HomeService {
   private readonly bestsellersUrl = 'products/bestsellers/1/123/20/GB/';
   private readonly getFlashSalesUrl = 'pages/home/1/32/';
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpService) {}
 
   public getTopSalesBanners(): Observable<ITopSalesBanner[]> {
     return this.http.get(`${API_URL}${this.topSalesBannersUrl}`)
