@@ -1,4 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Router } from "@angular/router";
 import { ITopSalesBanner, IFlashSaleItem } from '../../models';
 
 @Component({
@@ -15,5 +16,9 @@ export class ProductCardComponent {
   @Input() public height: number = 180;
   @Input() public width: number = 250;
 
-  public onTap() {}
+  constructor(private router: Router) {}
+
+  public onTap() {
+    this.router.navigate(['/web-view', this.product.webUrl]);
+  }
 }
