@@ -1,4 +1,4 @@
-<ActionBar class="action-bar">
+<ActionBar>
     <!--
     Use the NavigationButton as a side-drawer button in Android because ActionItems are shown on the right side of the ActionBar
     -->
@@ -11,7 +11,7 @@
         ios.position="left">
     </ActionItem>
     <Image src="~/shared/images/logo.png"></Image>
-    <ActionItem ios.position="right" android.position="right">
+    <ActionItem ios.position="right" android.position="right" (tap)="onTapAuth()">
       <Label class="fa auth-icon" text="&#xf2c0;"></Label>
     </ActionItem>
 </ActionBar>

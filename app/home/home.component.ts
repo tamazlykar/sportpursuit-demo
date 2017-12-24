@@ -5,6 +5,7 @@ import { HomeService } from './home.service';
 import { ScrollView, ScrollEventData } from "ui/scroll-view";
 import { EventData } from "tns-core-modules/data/observable/observable";
 import { ITopSalesBanner, IFlashSaleItem, IBestseller } from './models';
+import { login, LoginResult } from "ui/dialogs";
 
 @Component({
     selector: "Home",
@@ -37,6 +38,17 @@ export class HomeComponent implements OnInit {
   public onTap(args: EventData) {
     // using the unique id assigned via the view-model
     console.log(args.object.get("id"));
+  }
+
+  public onTapAuth() {
+    const options = {
+      title: "Login",
+      message: "Mock login screen",
+      okButtonText: "Ok",
+      cancelButtonText: "Cancel"
+    };
+
+    login(options);
   }
 
   public onScroll(args: ScrollEventData) {
