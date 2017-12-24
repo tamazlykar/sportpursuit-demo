@@ -1,29 +1,28 @@
 // Custom common variables
 @import '../../../app-variables';
 
+$card-font-background-color: black;
+$logo-background-color: rgba($color: #000000, $alpha: 0.5);
+
 .information-area {
-  background-color: black;
+  background-color: $card-font-background-color;
   font-size: $content-font-size;
+  padding: 5;
 }
 
 .title {
   font-size: $content-title-font-size;
+  font-weight: bold;
 }
 
 .logo-area {
   vertical-align: center;
-  background-color: rgba($color: #000000, $alpha: 0.5);
-}
-
-.logo {
-  opacity: 1;
+  background-color: $logo-background-color;
 }
 
 .extra {
   background-color: red;
   font-size: $content-font-size;
-}
-
-.element-width {
-  width: 250;
+  text-align: right;
+  padding-right: 4;
 }

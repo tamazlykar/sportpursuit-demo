@@ -1,11 +1,9 @@
 // Custom common variables
 @import '../../../app-variables';
 
-.information-area {
-  background-color: rgb(73, 73, 73);
-  font-size: $content-font-size;
-}
+$card-font-background-color: rgb(58, 58, 58);
 
-Image {
-  margin: 0;
+.information-area {
+  background-color: $card-font-background-color;
+  font-size: $content-font-size;
 }

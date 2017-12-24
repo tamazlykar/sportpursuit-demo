@@ -12,14 +12,13 @@ Page {
 }
 
  //Action bar
- ActionBar Image {
+ ActionBar .logo {
      horizontal-align: center;
  }
 
- ActionBar .auth-icon {
-  font-size: 20;
-  background-color: transparent;
-  width: 20;
+ ActionBar {
+   background-color: $main-app-color;
+   color: $text-color;
  }
 
 // Label
@@ -33,7 +32,6 @@ Label {
   font-size: $content-title-font-size;
   padding: 5;
 }
-
 
 .collapse {
   visibility: collapse;

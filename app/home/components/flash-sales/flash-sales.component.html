@@ -1,5 +1,5 @@
 <StackLayout>
-  <Label class="compartment-title" text='Flash Sale' backgroundColor="black"></Label>
+  <Label class="compartment-title" text='Flash Sale'></Label>
 
   <StackLayout class="p-5">
     <ProductCard *ngFor="let sale of sales" [product]="sale" [isStretched]="true"></ProductCard>
