@@ -34,14 +34,18 @@ it shouldn't have any other siblings other than the <ActionBar> component.
     <!--
     Use the tkMainContent directive to display the content of the page when you have an app drawer.
     -->
-      <ScrollView orientation="vertical" tkMainContent>
-        <StackLayout>
+      <GridLayout rows="*" tkMainContent>
 
-          <TopSalesBanners [banners]="topSalesBanners"></TopSalesBanners>
-          <Bestsellers [bestsellers]="bestsellers"></Bestsellers>
-          <FlashSales [sales]="flashSales"></FlashSales>
+          <ScrollView row="0" orientation="vertical" [class.invisible]="isLoading" [class.visible]="!isLoading">
+            <StackLayout>
+              <TopSalesBanners [banners]="topSalesBanners"></TopSalesBanners>
+              <Bestsellers [bestsellers]="bestsellers"></Bestsellers>
+              <FlashSales [sales]="flashSales"></FlashSales>
+            </StackLayout>
+          </ScrollView>
 
-        </StackLayout>
-      </ScrollView>
+          <ActivityIndicator row="0" [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'"
+            horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+      </GridLayout>
 
 </RadSideDrawer>
