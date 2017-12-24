@@ -1,0 +1,17 @@
+<StackLayout>
+
+  <GridLayout columns="auto, *, auto" rows="25" class="menu-item">
+    <Label col="0" *ngIf="hasIcon()" class="fa icon" [text]="getIconCode()"></Label>
+    <Label col="1" [text]="isFirstLevel ? (item.label | uppercase) : item.label"
+      (tap)="onTap($event)" [class.parent-text]="isFirstLevel" [class.child-text]="!isFirstLevel">
+    </Label>
+    <Label col="2" *ngIf="hasChildElements()" class="fa caret"
+      [text]="childrenCollapsed ? '&#xf0da;' : '&#xf0d7;'">
+    </Label>
+  </GridLayout>
+
+  <StackLayout *ngIf="hasChildElements()" [class.collapse]="childrenCollapsed">
+    <MenuItem *ngFor="let child of item.children" [item]="child" [isFirstLevel]="false"></MenuItem>
+  </StackLayout>
+
+</StackLayout>

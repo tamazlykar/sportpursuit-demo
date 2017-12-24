@@ -1,2 +1,14 @@
 // Custom common variables
 @import '../../app-variables';
+
+$menu-offset-top: 20;
+$logo-height: 50;
+
+.menu {
+  background-color: $primary;
+}
+
+.logo {
+  margin-top: $menu-offset-top;
+  height: $logo-height;
+}

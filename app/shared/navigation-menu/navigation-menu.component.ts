@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationMenuService } from './navigation-menu.service';
+import { IMenuItem } from './models/menu-item';
 
 @Component({
   selector: 'NavigationMenu',
@@ -8,8 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavigationMenuComponent implements OnInit {
-  constructor() { }
+  private menuItems: IMenuItem[];
+
+  constructor(private menuService: NavigationMenuService) { }
 
   public ngOnInit() {
+    this.menuService.getMenu()
+      .subscribe(data => this.menuItems = data);
   }
 }

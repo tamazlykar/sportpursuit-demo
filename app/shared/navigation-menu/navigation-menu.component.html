@@ -1,3 +1,11 @@
-<StackLayout>
-  <Label text="hello" backgroundColor="red"></Label>
-</StackLayout>
+<GridLayout rows="auto,*" class="menu">
+  <StackLayout row="0" class="logo">
+    <Image src="~/shared/images/logo.png" stretch="aspectFit"></Image>
+  </StackLayout>
+
+  <ScrollView row="1">
+      <StackLayout class="sidedrawer-left">
+          <MenuItem *ngFor="let item of menuItems" [item]="item"></MenuItem>
+      </StackLayout>
+  </ScrollView>
+</GridLayout>

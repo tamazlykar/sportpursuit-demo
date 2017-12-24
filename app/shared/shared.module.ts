@@ -4,24 +4,28 @@ import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/a
 
 import { MyDrawerItemComponent } from "./my-drawer-item/my-drawer-item.component";
 import { MyDrawerComponent } from "./my-drawer/my-drawer.component";
-import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
-import { NavigationMenuService } from './navigation-menu/navigation-menu.service';
+import { NavigationMenuModule } from './navigation-menu/navigation-menu.module';
+import { CacheService } from './services/cache.service';
+import { HttpService } from './services/http.service';
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        NativeScriptUISideDrawerModule
+        NativeScriptUISideDrawerModule,
+        NavigationMenuModule
     ],
     declarations: [
         MyDrawerComponent,
-        MyDrawerItemComponent,
-        NavigationMenuComponent
+        MyDrawerItemComponent
     ],
-    providers: [],
+    providers: [
+      CacheService,
+      HttpService
+    ],
     exports: [
         MyDrawerComponent,
         NativeScriptUISideDrawerModule,
-        NavigationMenuComponent
+        NavigationMenuModule
     ],
     schemas: [
         NO_ERRORS_SCHEMA

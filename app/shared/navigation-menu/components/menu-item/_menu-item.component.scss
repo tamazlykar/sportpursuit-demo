@@ -1,0 +1,32 @@
+// Custom common variables
+@import '../../../../app-variables';
+
+$menu-item-border-top-color: rgb(69, 69, 69);
+$menu-item-border-bottom-color: black;
+$menu-item-child-text-size: 12;
+$caret-color: $secondary;
+
+.menu-item {
+  background-color: $primary;
+  border-top-color: $menu-item-border-top-color;
+  border-width: 1;
+  border-bottom-color: $menu-item-border-bottom-color;
+  padding: 8;
+}
+
+.icon {
+  width: 35;
+}
+
+.parent-text {
+  font-weight: 600;
+}
+
+.child-text {
+  font-size: $menu-item-child-text-size;
+}
+
+.caret {
+  color: $caret-color;
+  margin-right: 10;
+}
