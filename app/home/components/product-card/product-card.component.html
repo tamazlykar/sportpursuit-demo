@@ -1,6 +1,6 @@
 <GridLayout rows="1, *, auto" columns="*"
     class="m-5" (tap)="onTap()"
-    [width]="isStretched ? '' : width.toString()" [height]="height.toString()">
+    [width]="isStretched ? 'auto' : width.toString()" [height]="height.toString()">
 
   <Image row="0" rowSpan="3" [src]="product.image" stretch="aspectFill"></Image>
 
