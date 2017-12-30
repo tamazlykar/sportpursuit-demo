@@ -2,6 +2,6 @@
   <NavigationButton text="Go Back" android.systemIcon="ic_menu_back"
     (tap)="onNavBtnTap()"></NavigationButton>
 </ActionBar>
-<GridLayout rows="*">
-  <WebView row="0" [src]="url + link"></WebView>
+<GridLayout>
+  <WebView #myWebView [src]="url + link"></WebView>
 </GridLayout>
