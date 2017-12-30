@@ -6,7 +6,7 @@
 
   <GridLayout row="1" columns="4*, 6*">
     <StackLayout col="0"  class="logo-area">
-      <Image [src]="product.logo"></Image>
+      <Image *ngIf="product.logo" [src]="product.logo"></Image>
       <Label [text]="product.extra" class="extra"></Label>
     </StackLayout>
     <Label col="1"></Label>
