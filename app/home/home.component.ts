@@ -55,14 +55,4 @@ export class HomeComponent implements OnInit {
         this.isLoading = false;
       });
   }
-
-  // private loadData() {
-  //   const tasks = [];
-  //   this.homeService.getTopSalesBanners()
-  //     .subscribe(data => this.topSalesBanners = data);
-  //   this.homeService.getBestsellers()
-  //     .subscribe(data => this.bestsellers = data);
-  //   this.homeService.getFlashSales()
-  //     .subscribe(data => this.flashSales = data);
-  // }
 }
